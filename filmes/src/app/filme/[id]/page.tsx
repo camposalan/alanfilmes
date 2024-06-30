@@ -2,11 +2,12 @@ import { Film } from "lucide-react";
 import { getDetails } from "@/app/actions/getDetails";
 import Link from "next/link";
 import NavBar from "../../components/navbar";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
 
-export default async function Sobre({params} : Params){
-    const filme = await getDetails(params.id)
+
+export default async function Sobre(){            //({params} : Params){
+    const filme = await getDetails(1022789)//(params.id)
+    
 
     return(
         <main className="flex min-h-screen flex-col">
